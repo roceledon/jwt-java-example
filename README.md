@@ -3,36 +3,60 @@ Example of implementation of jwt with java spring boot.
 
 ## API
 ### Auth
+
 Authenticate user and password, get a token.
-**Method:** POST
-**Produces:** json/application
-**Body:** 
+
+> **Path:** /v1/login/auth
+
+> **Method:** POST
+
+> **Produces:** json/application
+
+> **Body:** 
 	
-		{
-			"username": "test",
-			"password":"test"
-		}
-**Path:** /v1/login/auth
+	{
+		"username": "test",
+		"password":"test"
+	}
+
 
 ### Verify
+
 Check if the token is valid
-**Method:** POST
-**Produces:** json/application
-**Path:** /v1/dividend/status
+
+> **Path:** /v1/dividend/status
+
+> **Method:** POST
+
+> **Produces:** json/application
+
+
 ### Refresh
+
 Refresh a token before expiring time.
-**Method:** GET
-**Produces:** json/application
-**Head:** Authorization: token
-**Path:** /v1/login/refresh
+
+> **Path:** /v1/login/refresh
+
+> **Method:** GET
+
+> **Produces:** json/application
+
+> **Head:** Authorization: token
+
 
 ### Status Example
 
 A example API to test.
-**Method:** GET
-**Produces:** json/application
-**Head:** Authorization: token
-**Path:** /v1/dividend/status
+
+> **Path:** /v1/dividend/status
+
+> **Method:** GET
+
+> **Produces:** json/application
+
+> **Head:** Authorization: token
+
+
 
 
 ## Configure
