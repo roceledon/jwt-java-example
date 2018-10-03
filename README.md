@@ -1,5 +1,7 @@
 # # jwt-java-example
 Example of implementation of jwt with java spring boot.
+#### Java : 1.8
+
 
 ## API
 ### Auth
