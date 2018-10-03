@@ -50,7 +50,7 @@ Refresh a token before expiring time.
 
 A example API to test.
 
-> **Path:** /v1/dividend/status
+> **Path:** /v1/status/{mutualCode}
 
 > **Method:** GET
 
@@ -59,6 +59,17 @@ A example API to test.
 > **Head:** Authorization: token
 
 
+### Dividend Example
+
+A example API to test.
+
+> **Path:** /v1/dividend/{mutualCode}
+
+> **Method:** GET
+
+> **Produces:** json/application
+
+> **Head:** Authorization: token
 
 
 ## Configure
