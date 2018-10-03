@@ -160,8 +160,7 @@ definitions:
         type: string
         description: token
     example:
-      token: >-
-        eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0IiwiYXVkaWVuY2UiOiJ3ZWIiLCJjcmVhdGVkIjoxNTM4NTA4OTQ3ODg0LCJleHAiOjE1MzkxMTM3NDd9.sSTUCG46-MGq_vetgJ4IfBW7gj9C_FddIPe_YlnN8ZLrEw94FRFIoYX3yZ7Wv-q_nVxQxDd8rQLjC3zHdxfe4Q
+      token: "xxxxxx.yyyyyyy.zzzzzz"
   JwtAuthenticationRequest:
     type: object
     properties:
