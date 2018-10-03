@@ -1,10 +1,7 @@
 package cl.bennu.api.dividend.controller;
 
 import cl.bennu.api.dividend.api.AuthApi;
-import cl.bennu.api.dividend.model.JwtAuthenticationRequest;
-import cl.bennu.api.dividend.model.JwtAuthenticationResponse;
-import cl.bennu.api.dividend.model.JwtUser;
-import cl.bennu.api.dividend.model.JwtVerify;
+import cl.bennu.api.dividend.model.*;
 import cl.bennu.api.dividend.security.CustomAuthenticationManager;
 import cl.bennu.api.dividend.security.CustomUserDetailsService;
 import cl.bennu.api.dividend.security.JwtTokenUtil;
@@ -66,7 +63,7 @@ public class AuthApiController implements AuthApi {
             final String token = jwtTokenUtil.generateToken(userDetails, deviceType);
 
             // Return the token
-            return ResponseEntity.ok(new JwtAuthenticationResponse(token));
+            return ResponseEntity.ok(new JwtAuthenticationResponse(token, jwtTokenUtil.getExpirationDateFromToken(token)));
         }catch (Exception e){
             return ResponseEntity.badRequest().body(null);
         }
@@ -81,18 +78,18 @@ public class AuthApiController implements AuthApi {
         //if (jwtTokenUtil.canTokenBeRefreshed(token, user.getLastPasswordResetDate())) {
         if (jwtTokenUtil.canTokenBeRefreshed(token)) {
             String refreshedToken = jwtTokenUtil.refreshToken(token);
-            return ResponseEntity.ok(new JwtAuthenticationResponse(refreshedToken));
+            return ResponseEntity.ok(new JwtAuthenticationResponse(refreshedToken, jwtTokenUtil.getExpirationDateFromToken(refreshedToken)));
         } else {
             return ResponseEntity.badRequest().body(null);
         }
     }
 
     @Override
-    public ResponseEntity<?> verifyAuthenticationToken(@RequestBody JwtAuthenticationResponse jwtAuthenticationResponse) {
+    public ResponseEntity<?> verifyAuthenticationToken(@RequestBody TokenVerify tokenVerify) {
         JwtVerify jwtVerify = new JwtVerify();
         try{
-            if(jwtAuthenticationResponse != null) {
-                String token = jwtAuthenticationResponse.getToken();
+            if(tokenVerify != null) {
+                String token = tokenVerify.getToken();
                 String username = jwtTokenUtil.getUsernameFromToken(token);
                 JwtUser user = userDetailsService.loadUserByUsername(username);
 

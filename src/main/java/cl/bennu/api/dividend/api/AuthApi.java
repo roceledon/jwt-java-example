@@ -1,7 +1,7 @@
 package cl.bennu.api.dividend.api;
 
 import cl.bennu.api.dividend.model.JwtAuthenticationRequest;
-import cl.bennu.api.dividend.model.JwtAuthenticationResponse;
+import cl.bennu.api.dividend.model.TokenVerify;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.AuthenticationException;
@@ -20,5 +20,5 @@ public interface AuthApi {
     ResponseEntity<?> refreshAndGetAuthenticationToken(HttpServletRequest request);
 
     @RequestMapping(value = "${route.authentication.verify}", produces = MediaType.APPLICATION_JSON_VALUE, method = RequestMethod.POST)
-    ResponseEntity<?> verifyAuthenticationToken(@RequestBody JwtAuthenticationResponse jwtAuthenticationResponse);
+    ResponseEntity<?> verifyAuthenticationToken(@RequestBody TokenVerify tokenVerify);
 }

@@ -36,14 +36,14 @@
       "description": "Description for route.authentication.verify."
     },
     {
-      "name": "route.dividend.path",
+      "name": "route.path.dividend",
       "type": "java.lang.String",
-      "description": "Description for route.dividend.path."
+      "description": "Description for route.path.dividend."
     },
     {
-      "name": "route.dividend.status",
+      "name": "route.path.status",
       "type": "java.lang.String",
-      "description": "Description for route.dividend.status."
+      "description": "Description for route.path.status."
     },
     {
       "name": "user.username",

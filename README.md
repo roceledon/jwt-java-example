@@ -80,8 +80,8 @@ You can change the parameters in application.properties
 	route.authentication.path=/auth  
 	route.authentication.refresh=/refresh  
 	route.authentication.verify=/verify  
-	route.dividend.path=/dividend  
-	route.dividend.status=/status  
+	route.path.dividend=/dividend  
+	route.path.status=/status  
 	  
 	# User  
 	user.username=test  
