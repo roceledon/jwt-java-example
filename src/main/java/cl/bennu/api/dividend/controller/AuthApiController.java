@@ -96,9 +96,7 @@ public class AuthApiController implements AuthApi {
                 Boolean verify = jwtTokenUtil.validateToken(token, user);
 
                 if (verify != null) {
-
                     jwtVerify.setVerify(verify);
-
                     return ResponseEntity.ok(jwtVerify);
                 }
             }

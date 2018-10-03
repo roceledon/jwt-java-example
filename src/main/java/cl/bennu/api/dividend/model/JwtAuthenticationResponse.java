@@ -1,5 +1,7 @@
 package cl.bennu.api.dividend.model;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 import java.io.Serializable;
 import java.util.Date;
 
@@ -26,6 +28,7 @@ public class JwtAuthenticationResponse implements Serializable {
         this.token = token;
     }
 
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss.SSSXXX")
     public Date getExpiration() {
         return expiration;
     }

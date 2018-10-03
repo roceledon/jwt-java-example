@@ -1,5 +1,7 @@
 package cl.bennu.api.dividend.model;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 import java.io.Serializable;
 import java.util.Date;
 
@@ -43,6 +45,7 @@ public class Dividend implements Serializable {
         this.quota = quota;
     }
 
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss.SSSXXX")
     public Date getDayToPay() {
         return dayToPay;
     }
