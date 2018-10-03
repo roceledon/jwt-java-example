@@ -191,8 +191,7 @@ definitions:
         format: date
         pattern: "yyyy-MM-dd'T'HH:mm:ss.SSSXXX"
     example:
-      token: >-
-        eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0IiwiYXVkaWVuY2UiOiJ3ZWIiLCJjcmVhdGVkIjoxNTM4NTA4OTQ3ODg0LCJleHAiOjE1MzkxMTM3NDd9.sSTUCG46-MGq_vetgJ4IfBW7gj9C_FddIPe_YlnN8ZLrEw94FRFIoYX3yZ7Wv-q_nVxQxDd8rQLjC3zHdxfe4Q
+      token: "xxxxxx.yyyyyyy.zzzzzz"
       expiration: '2018-10-03T18:50:03.132Z'
   Error:
     type: object
@@ -259,4 +258,4 @@ definitions:
       quota: 6
       message: message to show
       dayToPay: '2018-10-03T18:50:03.132Z'
-      pdf: "JVBERi0xLjQKJeLjz9MKNSAwIG9iaiA8PC9GaWx0ZXIvRENURGVjb2RlL1R5cGU....."
+      pdf: "JVBERi0xLjQKJeLjz9MKNSAwIG9iaiA8PC9GaWx0ZXIvRENURGV....."
